@@ -4,6 +4,7 @@ public class Main {
     static int numero;
     static int opcion;
     static int i;
+    static boolean impar = true;
 
     public static void main(String[] args) {
         //Ejercicio 2: Verificar si un número ingresado es primo
@@ -48,9 +49,13 @@ public class Main {
             } else {
                 for (i = 3; i <= (int) Math.sqrt(numero); i +=2 ) {
                     if (numero % i == 0) {
-                        System.out.println("\uD83D\uDCA0 EL NÚMERO '" + numero + "' ES COMPUESTO \uD83D\uDCA0");
+                        impar = false;
                     }
+                }
+                if (impar == true) {
                     System.out.println("\uD83D\uDCA0 EL NÚMERO '" + numero + "' ES NÚMERO PRIMO \uD83D\uDCA0");
+                } else {
+                    System.out.println("\uD83D\uDCA0 EL NÚMERO '" + numero + "' ES COMPUESTO \uD83D\uDCA0");
                 }
             }
         } else {
